@@ -3,33 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adding an Event Listener to Multiple Elements Using a forEach() Loop</title>
+  <title>tip calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Tip calculator</h1>
   <main class="container">
-    
-    <div class="wrapper">
-      <p>Bill amount</p>
-      <input type="text" id="amount" placeholder="Amount to be paid">
-      <p>How was the service ?</p>
-    <select id="services">
-      <option selected disabled hidden>Select</option>
-    <option value="0.25">25%</option>
-    <option value="0.20">20%</option>
-    <option value="0.15">15%</option>
-    <option value="0.10">10%</option>
-    <option value="0.05">5%</option>
-    </select>
-    <p>Total number of persons</p>
-    <input type="text" id="persons" placeholder="Number of people charing"> 
-    <button id="calculate">Calculate</button>
+    <div class="bill_input">
+    <label for="bill_input">Bill</label>
+    <input type="text" name="bill_input" id="bill_input">
   </div>
-  <div class="tip">
-    <p>Tip Amount</p>
-    <span id="total">0</span>
-    <span id="each">each</span>
+    <div id="buttons_div">
+      <p>a tip percent:</p>
+      <div class="buttons_div">
+      <div class="butt" data-percentage="0.05">5%</div>
+      <div class="butt" data-percentage="0.10">10%</div>
+      <div class="butt" data-percentage="0.15">15%</div>
+      <div class="butt" data-percentage="0.25">25%</div>
+      <div class="butt" data-percentage="0.50">50%</div>
+    </div>
+  </div>
+    <div class="people_input">
+    <label for="people_input">number of people</label>
+    <input type="text" name="people-input" id="people_input">
+  </div>
+    <button type="submit" id="submit_button">calculate</button>
+    <div class="tip">
+      <p>a tip is:</p>
+    <div id="total">0</div>
   </div>
   </main>
   <script defer src="script.js"></script>

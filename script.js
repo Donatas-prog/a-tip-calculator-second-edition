@@ -1,29 +1,27 @@
+let submit = document.getElementById('submit_button');
+const bill = document.getElementById('bill_input');
+const people = document.getElementById('people_input')
+const buttons = document.querySelectorAll('.butt');
+const totalAmount = document.getElementById('total');
 
-window.onload = () =>
-	{
-		document.querySelector('#calculate').onclick = calculateTip;
-	}
 
-function calculateTip() {
-	let amount = document.querySelector('#amount').value;
-	let persons = document.querySelector('#persons').value;
-	let service = document.querySelector('#services').value; 
+buttons.forEach(btn =>  {
+    btn.addEventListener('click', function() {
+        buttons.forEach(bt => {
+            bt.classList.remove('active');
+            this.classList.add('active');
+        })
+    
+    })
+    
+})
+submit.addEventListener('click', calculateTip); 
+function calculateTip () {
+    let newBill = parseFloat(bill.value);
+    let numberOfPeople = parseFloat(people.value)
+    let tipPercentage = parseInt(document.querySelector('.buttons.active').dataset.percentage)
 
-	console.log(service);
-	if (amount === '' && service === 'Select') {
-		alert("Please enter valid values");
-		return;
-	}
+const tipAmount = ((newBill * tipPercentage) / numberOfPeople).toFixed(2);
 
-	if (persons === '1')
-	
-		document.querySelector('#each').style.display = 'none';
-	else 
-		document.querySelector('#each').style.display = 'block';
-
-	let total = (amount * service) / persons;
-	total = total.toFixed(2);
-
-	document.querySelector('.tip').style.display = 'block';
-	document.querySelector('#total').innerHTML = total;
+totalAmount.innerText = `$${tipAmount}`;
 }

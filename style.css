@@ -1,76 +1,67 @@
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 body {
-	background-color: #001f4f;
-	font-family: "Raleway", sans-serif; 
-    position: relative;
+    background-color: aquamarine;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Lemon', serif;
 }
-
 .container {
-	width: 350px;
-	height: 500px;
-	background-color: #fff;
-	position: absolute;
-	left: 50%;
-	top: 0%;
-	transform: translateX(-50%) translateY(30%);
-	border-radius: 20px;
+    width: 25%;
+    min-width: 300px;
+    height: 350px;
+    border: none;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: .4rem;
 }
-
-h1 {
-	position: absolute;
-	left: 50%;
-	top: 90px;
-	width: 300px;
-	transform: translateX(-50%);
-	background-color: #ff851b;
-	color: #fff;
-	font-weight: 100;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-	font-size: 18px;
-	text-align: center;
-	padding: 10px;
+.bill_input {
+    margin:  0 auto;
+    
 }
-
-.wrapper {
-	padding: 20px;
+.buttons_div {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
 }
-
-input,
-select {
-	width: 80%;
-	border: none;
-	border-bottom: 1px solid #0074d9;
-	padding: 10px;
+#buttons_div, .butt{
+    margin: .3rem;
 }
-
-input:focus,
-select:focus {
-	border: 1px solid #0074d9;
-	outline: none;
+#buttons_div p {
+    width: 80%;
+    margin: 0 auto;
 }
+.butt {
+    padding: .2rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: white;
 
-select {
-	width: 88% !important;
+}
+.people_input {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
 }
 
 button {
-	margin: 20px auto;
-	width: 150px;
-	height: 50px;
-	background-color: #39cccc;
-	color: #fff;
-	font-size: 16px;
-	border: none;
-	border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Lemon', serif;
 }
-
 .tip {
-	text-align: center;
-	font-size: 18px;
-	display: none;
+    display: grid;
+    place-items: center;
+}
+.active {
+    background-color: hsl(0, 5%, 8%);
+    color: hsl(0, 38%, 92%);
 }
